@@ -5,8 +5,8 @@ Contributors: phkcorp2005
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9674139
 Tags: shari phk any digg yahoo msn live facebook stumble technorati reddit newsvine any-to-any share social
 Requires at least: 2.9
-Tested up to: 2.9.1
-Stable tag: 1.0
+Tested up to: 4.3
+Stable tag: 1.0.1
 
 Provides selective social network sharing of pages by using shortcodes. Add page sharing only to the pages 
 you want!
@@ -43,6 +43,9 @@ Please do not be afraid of asking questions?<br>
 
 
 # Changelog 
+= 1.0.1 =
+* Updates for WP 4.3
+
 = 1.0 =
 * Created
 
