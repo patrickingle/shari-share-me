@@ -3,7 +3,7 @@
 Plugin Name: Shari Share Me
 Plugin URI: https://wordpress.org/plugins/shari-share-me/
 Description: Provides selective social network sharing of pages by using shortcodes. Add page sharing only to the pages you want!
-Version: 1.0.1
+Version: 1.0.2
 Author: PHK Corporation
 Author URI: http://www.phkcorp.com
 */
@@ -77,6 +77,12 @@ offer contributions), she may change her mind?</p>
 						JavaScript to obtain and format the current page url that is sent to the social network.
 						The social network is then launched in a separate window,</p>
 				</fieldset>
+                        
+                        <fieldset class="options">
+                            <legend><h2><u>Support</u></h2></legend>
+                            <p>Support is provided from <a href="https://github.com/patrickingle/shari-share-me/issues" target="_blank">github.com</a> (opens in new window)</p>
+                            <p>You must have a free github.com account to post issue requests.</p>
+                        </fieldset>
 
 				<fieldset class='options'>
 					<legend><h2><u>Wordpress Development</u></h2></legend>
@@ -251,12 +257,9 @@ function show_shari_networks($atts, $content=null, $code="")
 
    <div class="post_share_stuff">
    <ul>
-		<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/delicious.gif" alt="Add to del.icio.us" onclick="clipIt(\'http://del.icio.us/post?url='.$url.'&title=\')" /></li>
- 		<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/google.gif" alt="Add to Google" onclick="clipIt(\'http://www.google.com/bookmarks/mark?op=edit&bkmk='.$url.'&title=\')"/></li>
+ 	<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/google.gif" alt="Add to Google" onclick="clipIt(\'http://www.google.com/bookmarks/mark?op=edit&bkmk='.$url.'&title=\')"/></li>
       	<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/digg.gif" alt="Digg it" onclick="clipIt(\'http://www.digg.com/submit?phase=2&url='.$url.'&title=\')" /></li>
-      	<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/yahoo.gif" alt="Add to Yahoo !" onclick="clipIt(\'http://myweb2.search.yahoo.com/myresults/bookmarklet?u='.$url.'&t=\')" /></li>
       	<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/live.gif" alt="Add to Windows Live" onclick="clipIt(\'https://favorites.live.com/quickadd.aspx?marklet=1&mkt=en-us&url='.$url.'&title=\')" /></li>
-      	<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/facebook.gif" alt="Add to Facebook" onclick="clipIt(\'http://www.facebook.com/share.php?u='.$url.'&title=\')" /></li>
       	<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/stumble.gif" alt="Add to StumbleUpon" onclick="clipIt(\'http://www.stumbleupon.com/submit?url='.$url.'&title=\')" /></li>
       	<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/technorati.gif" alt="Technorati" onclick="clipIt(\'http://technorati.com/cosmos/search.html?url='.$url.'\')"></li>
       	<li><img src="'. get_bloginfo('wpurl') .'/wp-content/plugins/shari-share-me/images/reddit.gif" alt="Reddit" onclick="clipIt(\'http://reddit.com/submit?url='.$url.'&title=\')"></li>
