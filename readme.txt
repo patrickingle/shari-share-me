@@ -59,6 +59,6 @@ We make honorable mention to anyone who helps make Shari Share Me a better plugi
 
 == Contact ==
 
-Support is provided at https://github.com/patrickingle/shari-share-me/issues. You will require a free account on github.com
+Support is provided at https://github.com/presspage2018/shari-share-me/issues. You will require a free account on github.com
 
-Please contact phkcorp2005@gmail.com or visit the above forum with questions, comments, or requests.
+Please contact presspage.entertainment@gmail.com or visit the above forum with questions, comments, or requests.
