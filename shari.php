@@ -3,7 +3,7 @@
 Plugin Name: Shari Share Me
 Plugin URI: https://wordpress.org/plugins/shari-share-me/
 Description: Provides selective social network sharing of pages by using shortcodes. Add page sharing only to the pages you want!
-Version: 1.0.2
+Version: 1.0.3
 Author: PressPage Entertainment Inc.
 Author URI: https://presspage.info
 */
@@ -33,7 +33,7 @@ Author URI: https://presspage.info
 function addShariToManagementPage()
 {
     // Add a new submenu under Options:
-    add_options_page('Shari Share Me', 'Shari Share Me', 8, 'shari', 'displayShariManagementPage');
+    add_options_page('Shari Share Me', 'Shari Share Me', 'administrator', 'shari', 'displayShariManagementPage');
 }
 
 // Display the admin page.
@@ -80,7 +80,7 @@ offer contributions), she may change her mind?</p>
                         
                         <fieldset class="options">
                             <legend><h2><u>Support</u></h2></legend>
-                            <p>Support is provided from <a href="https://github.com/presspage2018/shari-share-me/issues" target="_blank">github.com</a> (opens in new window)</p>
+                            <p>Support is provided from <a href="https://github.com/pingleware/shari-share-me/issues" target="_blank">github.com</a> (opens in new window)</p>
                             <p>You must have a free github.com account to post issue requests.</p>
                         </fieldset>
 
@@ -182,9 +182,21 @@ add_action('admin_menu', 'addShariToManagementPage');<br/>
 }
 
 function selfURL() {
-	$s = empty($_SERVER["HTTPS"]) ? ''
-		: ($_SERVER["HTTPS"] == "on") ? "s"
-		: "";
+	$s = "";
+	if (isset($_SERVER['HTTPS'])) {
+		if (empty($_SERVER['HTTPS'])) {
+			$s = "";
+		} else {
+			if ($_SERVER['HTTPS'] === 'on') {
+				$s = 's';
+			} else {
+				$s = '';
+			}
+		}
+	} else {
+		$s = "";
+	}
+	
 	$protocol = strleft(strtolower($_SERVER["SERVER_PROTOCOL"]), "/").$s;
 	$port = ($_SERVER["SERVER_PORT"] == "80") ? ""
 		: (":".$_SERVER["SERVER_PORT"]);
